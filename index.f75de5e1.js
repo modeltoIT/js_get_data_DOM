@@ -1,0 +1,14 @@
+"use strict";
+const populationArray = document.querySelectorAll(".population");
+const totalPopulationElement = document.querySelector(".total-population");
+const averagePopulationElement = document.querySelector(".average-population");
+let totalPopulation = 0;
+populationArray.forEach((item)=>{
+    // const population = +item.firstChild.nodeValue.replaceAll(',', '');
+    const population = +item.textContent.replaceAll(",", "");
+    totalPopulation += population;
+});
+totalPopulationElement.textContent = totalPopulation.toLocaleString("en-US");
+averagePopulationElement.textContent = (totalPopulation / populationArray.length).toLocaleString("en-US");
+
+//# sourceMappingURL=index.f75de5e1.js.map
